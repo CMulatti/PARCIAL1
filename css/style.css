@@ -85,7 +85,7 @@ body {
     /* stays underlined, no need to change text-decoration */
 }
 
-
+/* Has visto estas aves? Green section*/
 .main-birds {
     background-color: var(--c-primario); /* green background */
     text-align: center;                 /* center the text */
@@ -105,6 +105,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/*Bird Gallery section*/
 .bird-gallery {
     background-color: var(--c-fondo);
     min-height: 100vh; /* fills most of the viewport */
@@ -117,8 +118,110 @@ html {
 
 
 
+/*CRUD panel for admin*/
+
+/* Style for CRUD panel headings */
+.crud-panel h2 {  
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--c-primario);
+    font-size: 1.5rem;
+}
+
+.crud-panel {
+    background: #294681;
+    border: 1px solid #1f2937;
+    border-radius: .8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: .75rem;
+    align-items: start;
+}
+
+.row > div {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
+/* Form elements styling for CRUD panels */
+.crud-panel label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    color: var(--c-texto);
+}
+
+.crud-panel input[type="text"], 
+.crud-panel textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    font-family: var(--ff-base);
+    font-size: var(--fz-base);
+    line-height: var(--lh-base);
+    background-color: var(--c-fondo);
+    color: var(--c-texto);
+    box-sizing: border-box; /* ensures padding doesn't add to width */
+}
+
+.crud-panel textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+}
+
+.crud-panel input[type="text"]:focus, 
+.crud-panel textarea:focus {
+    outline: none;
+    border-color: var(--c-primario);
+    box-shadow: 0 0 0 2px rgba(215, 243, 105, 0.2);
+}
+
+.crud-panel input[type="text"]::placeholder,
+.crud-panel textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
 
 
+/* Simple file input styling */
+.crud-panel input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    background-color: var(--c-fondo);
+    color: var(--c-texto);
+    box-sizing: border-box;
+}
+
+/* Simple button styling */
+.form-actions {
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--c-primario);
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    background-color: #c5e055;
+}
+
+/* Keep 3 columns layout */
+.bird-form {
+    grid-template-columns: 1fr 2fr 1fr;
+}

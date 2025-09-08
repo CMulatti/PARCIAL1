@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/admin.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido Administrador</h1>
+    </header>
+
+    <main>
+        <section id="bird-maker" class="crud-panel">
+            <h2>Creador de aves</h2>
+            <div class="row bird-form">
+                <div>
+                    <label for="birdname">Nombre:</label>
+                    <input type="text" id="birdname" placeholder="Ingrese nombre del ave">
+                </div>
+                <div>
+                    <label for="birddescription">Descripción:</label>
+                    <textarea id="birddescription" placeholder="Ingrese detalles del ave (características, habitat, comportamiento, etc. Puede escribir múltiples párrafos)"></textarea>
+                </div>
+                <div>
+                    <label for="birdpic">Imagen del ave:</label>
+                    <input type="file" id="birdpic" accept="image/*">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button id="save-bird">Guardar Ave</button>
+            </div>
+        </section>
+
+                
+            </div>
+        </section>
+
+    <section id="user-maker" class="crud-panel">
+        <h2>Administrador de usuarios</h2>
+        <!-- form and content -->
+    </section>
+
+    <section id="sighting-maker" class="crud-panel">
+         <h2>Moderar avistamientos</h2>
+         <!-- form and content -->
+    </section>
+</main>
+    
+</body>
+</html>

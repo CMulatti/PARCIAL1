@@ -44,5 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#birdname').value = '';
         $('#birddescription').value = '';
         $('#birdpic').value = '';
+
+
+        //LOGIC TO DISPLAY BIRD UNDER 'AVES GUARDADAS' 
+        const li = document.createElement('li');
+        li.textContent = name;
+        li.dataset.birdName = name; // Store the name for later use
+    
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Eliminar';
+        deleteButton.className = 'pill';
+        deleteButton.dataset.action = 'eliminar';
+    
+        deleteButton.addEventListener('click', () => {
+        if (confirm(`¿Estás seguro de que quieres eliminar "${li.dataset.birdName}"?`)) {
+            li.remove();
+        }
+        });
+        
+        li.appendChild(deleteButton);
+        $('#saved-birds-list').appendChild(li);
+
+        $('#txtItem').value = '';
+        $('#txtItem').focus();
+ 
+
+
     });
 });

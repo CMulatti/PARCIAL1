@@ -1,0 +1,124 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --c-fondo: #0f172a; 
+    --c-texto: #f2f4f7;
+    --c-secundario: #ff9d00;
+    --c-primario: #d7f369;
+    --c-alerta: red;
+    --ff-base: system-ui, Arial, sans-serif;
+    --fz-base: 16px;
+    --lh-base:1.6;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-size: var(--fz-base);
+    line-height: var(--lh-base);
+    color: var(--c-texto);
+    background: var(--c-fondo);
+}
+
+/* Top-right nav (Ingresar / Crear cuenta) */
+.user-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #104e8b;
+    gap: 1rem;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.user-nav a {
+    background: #1c2539;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: var(--c-texto);
+    text-decoration: none; /* not underlined normally */
+}
+
+.user-nav a:hover {
+    color: var(--c-secundario);  /* change color on hover*/
+    text-decoration: underline; /* underline only on hover */
+}
+
+/*Centered main title + description */
+.main-nav {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.main-nav h1 {
+    font-size: 12.5rem; /* big title Aves de Chile*/
+    margin-bottom: .5rem;
+}
+
+.main-nav h3 {
+    font-size: 1.5rem; /* site description: Web de avistamientos...*/
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: var(--c-secundario);
+}
+
+/* Site links (Nuestras Aves, Blog, Nosotros, Contacto) */
+.site-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 15rem;
+    padding: 0;
+}
+
+.site-links a {
+    color: var(--c-primario);
+    text-decoration: underline; /* always underlined */
+    font-size: 1rem;
+}
+
+.site-links a:hover {
+    color: var(--c-secundario); /* change color on hover */
+    /* stays underlined, no need to change text-decoration */
+}
+
+
+.main-birds {
+    background-color: var(--c-primario); /* green background */
+    text-align: center;                 /* center the text */
+    padding: 3rem 1rem;                 /*make the section taller and wider */
+    width: 100%;                        /* span full width */
+    scroll-margin-top: 0; /* ensures it snaps to the very top */
+}
+
+.main-birds h2 {
+    color: black;                       /* black text */
+    font-size: 5.5rem;                  /* make text bigger */
+    margin: 0;                          /* remove default margins */
+    font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bird-gallery {
+    background-color: var(--c-fondo);
+    min-height: 100vh; /* fills most of the viewport */
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+
+
+
+
+
+
+
+

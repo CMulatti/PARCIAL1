@@ -192,7 +192,7 @@ html {
 }
 
 
-/* Simple file input styling */
+/*file input styling */
 .crud-panel input[type="file"] {
     width: 100%;
     padding: 0.75rem;
@@ -203,7 +203,7 @@ html {
     box-sizing: border-box;
 }
 
-/* Simple button styling */
+/*button styling */
 .form-actions {
     margin-top: 1rem;
 }
@@ -226,11 +226,12 @@ html {
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-
+/*for the detele bird pill button, still to be implemented */
 .pill { 
     display:inline-block; 
     padding:.2rem .5rem; 
     border-radius:999px; 
-    background:#da0d0d; 
+    background: var(--c-alerta); 
     margin-right:.4rem; 
     border: 1px solid #24304a }
+    

@@ -1,9 +1,8 @@
 const $ = (sel) => document.querySelector(sel);
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get birds from localStorage
-    const savedBirds = JSON.parse(localStorage.getItem('birds') || '[]');
-    
+    // Get birds from localStorage and transform then into JS array of bird objects
+    const savedBirds = JSON.parse(localStorage.getItem('birds') || '[]'); 
     // Find where to put the bird cards
     const birdGallery = $('.bird-gallery');
     

@@ -1,6 +1,6 @@
 export const $ = (sel) => document.querySelector(sel);
 
-// DOMContentLoaded makes JS wait until the HTML is fully loaded before running 
+// DOMContentLoaded makes JS wait until the HTML is fully loaded before running, the code runs after the DOM is fully parsed, so that the elements we need actually exist 
 document.addEventListener('DOMContentLoaded', function() {
     
     $('#btn-save-bird').addEventListener('click', () => {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Get existing birds from localStorage (or empty array instead of 'null' if there is nth yet)
-            let savedBirds = JSON.parse(localStorage.getItem('birds') || '[]'); //localStorage only saves strings, JSON.parse converts that string back into a real JS array
+            const savedBirds = JSON.parse(localStorage.getItem('birds') || '[]'); //localStorage only saves strings, JSON.parse converts that string back into a real JS array
             
             // Add our new bird object to the array of previously saved birds
             savedBirds.push(newBird);

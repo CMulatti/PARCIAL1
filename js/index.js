@@ -16,29 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
     savedBirds.forEach(bird => {
         // Create the card container
         const birdCard = document.createElement('div');
-        birdCard.className = 'bird-card';
-        birdCard.style.border = '1px solid #ccc';
-        birdCard.style.borderRadius = '8px';
-        birdCard.style.padding = '15px';
-        birdCard.style.margin = '10px';
-        birdCard.style.cursor = 'pointer';
-        birdCard.style.textAlign = 'center';
-        birdCard.style.width = '250px';
-        birdCard.style.display = 'inline-block';
+        birdCard.className = 'bird-card'; // Use CSS class instead of inline styles
         
         // Add the bird image
         const birdImage = document.createElement('img');
         birdImage.src = bird.image;
         birdImage.alt = bird.name;
-        birdImage.style.width = '100%';
-        birdImage.style.height = '200px';
-        birdImage.style.objectFit = 'cover';
-        birdImage.style.borderRadius = '4px';
         
         // Add the bird name
         const birdName = document.createElement('h3');
         birdName.textContent = bird.name;
-        birdName.style.margin = '10px 0';
         
         // Add click event to go to detail page
         birdCard.addEventListener('click', () => {
